@@ -4,7 +4,7 @@ COPY src src
 COPY pom.xml pom.xml
 RUN mvn clean package -q
 
-FROM openjdk:11.0.10-jdk-slim
+FROM openjdk:11.0.13-jdk-slim
 WORKDIR /javalin
 COPY --from=maven /javalin/target/javalin-1.0-shaded.jar app.jar
 
