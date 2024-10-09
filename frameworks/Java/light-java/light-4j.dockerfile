@@ -4,7 +4,7 @@ COPY pom.xml pom.xml
 COPY src src
 RUN mvn package -q
 
-FROM openjdk:11.0.3-jdk-slim
+FROM openjdk:11.0.13-jdk-slim
 WORKDIR /light-4j
 COPY --from=maven /light-4j/target/techempower-1.0.0.jar app.jar
 
