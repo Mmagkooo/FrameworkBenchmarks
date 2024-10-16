@@ -4,7 +4,7 @@ COPY pom.xml pom.xml
 COPY src src
 RUN mvn package -q
 
-FROM openjdk:11.0.3-jdk-slim
+FROM openjdk:11.0-jdk-slim
 WORKDIR /baratine
 COPY --from=maven /baratine/target/testTechempowerBaratine-0.0.1-SNAPSHOT.jar app.jar
 
