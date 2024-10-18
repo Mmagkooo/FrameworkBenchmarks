@@ -4,7 +4,7 @@ COPY src src
 COPY pom.xml pom.xml
 RUN mvn package -q
 
-FROM openjdk:11.0.3-jdk-slim
+FROM openjdk:11.0-jdk-slim
 WORKDIR /armeria
 COPY --from=maven /armeria/target/hello-1.0-SNAPSHOT.jar app.jar
 
