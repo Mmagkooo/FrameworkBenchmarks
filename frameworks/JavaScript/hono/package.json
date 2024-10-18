@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@hono/node-server": "^1.10.1",
-    "hono": "^3.10.4",
+    "hono": "^4.6.5",
     "postgres": "^3.4.3"
   },
   "license": "MIT",
