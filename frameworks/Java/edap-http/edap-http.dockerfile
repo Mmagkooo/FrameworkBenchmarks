@@ -4,7 +4,7 @@ COPY pom.xml pom.xml
 COPY src src
 RUN mvn compile assembly:single -q
 
-FROM openjdk:8u275-jdk-slim
+FROM openjdk:8u322-jdk-slim
 WORKDIR /edap-http
 COPY --from=maven /edap-http/target/edap-http-benchmark-1.0-SNAPSHOT-jar-with-dependencies.jar app.jar
 
