@@ -21,7 +21,7 @@ EXPOSE 3000
 
 CMD ["sh", "run.sh"]
 
-FROM alpine:3.19
+FROM alpine:3.20.3
 
 WORKDIR /zap
 
