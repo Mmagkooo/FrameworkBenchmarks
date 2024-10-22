@@ -6,7 +6,7 @@ COPY ktor-pgclient/gradlew gradlew
 COPY ktor-pgclient/src src
 RUN /app/gradlew --no-daemon shadowJar
 
-FROM amazoncorretto:17.0.11-al2023-headless
+FROM amazoncorretto:17.0.13-al2023-headless
 WORKDIR /app
 COPY --from=build /app/build/libs/ktor-pgclient.jar ktor-pgclient.jar
 
