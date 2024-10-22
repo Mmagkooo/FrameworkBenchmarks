@@ -4,7 +4,7 @@ COPY pom.xml pom.xml
 COPY src src
 RUN mvn compile assembly:single -q
 
-FROM openjdk:11.0.3-jdk-slim
+FROM openjdk:11.0.13-jdk-slim
 WORKDIR /jetty
 COPY --from=maven /jetty/target/jetty-example-0.1-jar-with-dependencies.jar app.jar
 
