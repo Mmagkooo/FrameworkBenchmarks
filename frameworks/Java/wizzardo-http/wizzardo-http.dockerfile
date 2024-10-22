@@ -8,7 +8,7 @@ COPY src src
 
 RUN gradle --refresh-dependencies clean fatJar
 
-FROM openjdk:11.0.3-jdk-slim
+FROM openjdk:11.0.13-jdk-slim
 WORKDIR /wizzardo-http
 COPY --from=gradle /wizzardo-http/build/libs/wizzardo-http-all-1.0-SNAPSHOT.jar app.jar
 
